@@ -10,6 +10,7 @@ class Personagem:
         self.habilidadesPersonagem = habilidades
         self.habilidades = []
         self.mao = []
+        self.tipo = 0
 
         #Criando uma lista de habilidades com 5 cópias de cada habilidade.
         for habilidade in self.habilidadesPersonagem:
@@ -23,6 +24,8 @@ class Personagem:
         random.shuffle(self.habilidades)
         self.pegarCartas(5)
 
+    def regem(self):
+        self.energia +=1
     #Adiciona cartas do baralho para a mão do personagem.
     def pegarCartas(self, quantidade : int = 1):
         if len(self.mao) >= 5:
